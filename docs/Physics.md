@@ -1,7 +1,7 @@
 [Back to Overview](README.md)
 
 # Description of Physics
-
+????
 The setup contains the following part:
 * A magnetic field which should be measured using the NMR Probe. This field is called the [Background Magnetic Field](#background_field).
 * The NMR probe itself is made out of a [probe sample](#probe) made out of some proton rich [material](#materials) surrounded by a [probe coil](#coil_field) which is used to apply [RF pulses](#rf_pulse) and [pickup the induced signal](#FreeInductionDecay) in the probe sample.
