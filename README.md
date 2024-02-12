@@ -1,3 +1,4 @@
+cr: Dr. René Reimann
 # FID_Simulation
 The repository contains scripts to generate simulations of pulsed Nuclear Magnetic Resonance (pNMR) free induction decay (FID) signals.
 
