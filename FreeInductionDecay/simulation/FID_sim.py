@@ -365,4 +365,4 @@ class FID_simulation(object):
         M = rk_res.y.reshape((3, self.N_cells))
         self.cells_mu.set_x_y_z(M[0], M[1], M[2])
 
-        return np.array(history, dtype=[(k, np.float) for k in ["time", "Mx_mean", "My_mean", "Mz_mean", "Mx_center", "My_center", "Mz_center"]])
+        return np.array(history, dtype=[(k, np.float64) for k in ["time", "Mx_mean", "My_mean", "Mz_mean", "Mx_center", "My_center", "Mz_center"]])

@@ -2,12 +2,12 @@ from FreeInductionDecay.units import *
 from FreeInductionDecay.simulation.E989 import StorageRingMagnet, FixedProbe
 from FreeInductionDecay.simulation.FID_sim import FID_simulation
 from FreeInductionDecay.simulation.noise import WhiteNoise
-​
+
 import numpy as np
 import matplotlib.pyplot as plt
-​
-​# create an external magnetic field and set a linear gradient with strength 10 ppm​
-b_field = StorageRingMagnet( ) # 1,45 T
+
+# create an external magnetic field and set a linear gradient with strength 10 ppm​
+b_field = StorageRingMagnet(1) # 1,45 T
 B0 = b_field.An[2]
 b_field.An[8] = 10*ppm/cm*B0
 
@@ -16,17 +16,17 @@ probe = FixedProbe()
 
 # setup the simulation with 1000 cells and seed 1
 sim = FID_simulation(probe, b_field, N_cells=1000, seed=1)
-​
+
 # setup noise. The noise scale is 2% of the maximal FID signal amplitude
 # ToDo: Make a better example here
 noise = WhiteNoise(scale=12*uV*0.02)
-​
+
 # run a spin echo sequence.
 # The readout window has a pretrigger window and we add noise to the simulation
 # You get back the flux vs time
 flux_echo, time_echo = sim.spin_echo(pretrigger=True, noise=noise)
-​
-​# Plotting the FID signal
+
+# Plotting the FID signal
 fig, ax = plt.subplots()
 ax.set_xlabel("time in ms")
 ax.set_ylabel("Amplitude in a.u.")

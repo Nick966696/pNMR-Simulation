@@ -7,7 +7,7 @@ with open('LICENSE') as f:
     license = f.read()
 
 setuptools.setup(
-    name="FreeInductionDecay", # Replace with your own username
+    name="Nick966696", # Replace with your own username
     version="0.0.1",
     author="Rene Reimann    ",
     author_email="rreimann@uni-mainz.de",
